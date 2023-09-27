@@ -1,10 +1,11 @@
 <?php
+	define( "CONV_C_F" , 1.8 ) ;
 	
+	echo "Saisir la température en °C : \n" ;
 	
-	echo "Saisir la température en °C : " ;
+	$C = fgets( STDIN ) ;
 	
-	$temperatureCelsius = fgets( STDIN ) ;
+	$F = CONV_C_F * $C + 32  ;
 	
-	$temperatureFahrenheit = 1.8 * $temperatureCelsius + 32 ;
-	
-	echo "Saisir la température en °F : " ,  $temperatureFahrenheit , "°C/°F\n" ;
+	echo "Température en °F : " , $F , "\n" ;
+?>
